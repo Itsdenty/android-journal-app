@@ -6,7 +6,6 @@ import com.journalapp.tjohnn.journalapp.model.PreferencesHelper;
 import com.journalapp.tjohnn.journalapp.model.database.JournalEntry;
 import com.journalapp.tjohnn.journalapp.model.repository.JournalRepository;
 import com.journalapp.tjohnn.journalapp.utils.AppDi;
-import com.journalapp.tjohnn.journalapp.utils.AppExecutors;
 import com.journalapp.tjohnn.journalapp.utils.Constants;
 
 import java.util.Date;

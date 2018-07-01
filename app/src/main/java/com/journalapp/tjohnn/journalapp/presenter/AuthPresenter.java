@@ -56,7 +56,7 @@ public class AuthPresenter implements LoginContract.Presenter {
         preferencesHelper.putString(Constants.USER_EMAIL_PREF_KEY, user.getEmail());
         preferencesHelper.putString(Constants.USER_NAME_PREF_KEY, user.getDisplayName());
         preferencesHelper.putString(Constants.USER_ID_PREF_KEY, user.getUid());
-        preferencesHelper.putString(Constants.USER_ID_PREF_KEY, user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : "");
+        preferencesHelper.putString(Constants.PICTURE_URL_PREF_KEY, user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : "");
 
         mView.openDashboard(user);
     }

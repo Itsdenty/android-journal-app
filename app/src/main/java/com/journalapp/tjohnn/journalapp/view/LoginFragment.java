@@ -30,6 +30,7 @@ import com.journalapp.tjohnn.journalapp.contracts.LoginContract;
 import com.journalapp.tjohnn.journalapp.presenter.AuthPresenter;
 import com.journalapp.tjohnn.journalapp.utils.AppDi;
 import com.journalapp.tjohnn.journalapp.utils.Constants;
+import com.journalapp.tjohnn.journalapp.utils.Utils;
 
 /**
  * Created by Tjohn on 6/25/18.
@@ -57,11 +58,6 @@ public class LoginFragment extends Fragment implements LoginContract.View {
         mPresenter = new AuthPresenter(this);
         mActivity = getActivity();
         mAuth = FirebaseAuth.getInstance();
-
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            mPresenter.saveUserAndOpenDashboard(currentUser);
-        }
     }
 
 
@@ -83,11 +79,11 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
         loginButton.setOnClickListener(e->{
             Toast.makeText(mActivity, getString(R.string.login_button_message), Toast.LENGTH_SHORT).show();
-            openDashboard(null);
-            AppDi.getPreferencesHelper().putString(Constants.USER_NAME_PREF_KEY, "Tosin Adeoye");
-            AppDi.getPreferencesHelper().putString(Constants.USER_EMAIL_PREF_KEY, "johnjokoo@gmail.com");
-            AppDi.getPreferencesHelper().putString(Constants.PICTURE_URL_PREF_KEY, "");
-            AppDi.getPreferencesHelper().putString(Constants.USER_ID_PREF_KEY, "4r5");
+            // openDashboard(null);
+            // AppDi.getPreferencesHelper().putString(Constants.USER_NAME_PREF_KEY, "Tosin Adeoye");
+            // AppDi.getPreferencesHelper().putString(Constants.USER_EMAIL_PREF_KEY, "johnjokoo@gmail.com");
+            // AppDi.getPreferencesHelper().putString(Constants.PICTURE_URL_PREF_KEY, "");
+            // AppDi.getPreferencesHelper().putString(Constants.USER_ID_PREF_KEY, "4r5");
         });
 
         signInButton.setOnClickListener(this::signInUser);
@@ -123,6 +119,10 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
     @Override
     public void onResume() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            mPresenter.saveUserAndOpenDashboard(currentUser);
+        }
         super.onResume();
     }
 
@@ -133,6 +133,8 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
     @Override
     public void openDashboard(FirebaseUser user) {
+        Utils.logD(user.getDisplayName());
+        Utils.logD(user.getPhotoUrl().toString());
         startActivity(new Intent(mActivity,MainActivity.class));
     }
 

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
     ActionBar toolbar;
     FragmentManager fragmentManager;
-    Menu menu;
+    DashboardFragment dashboardFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,21 @@ public class MainActivity extends AppCompatActivity implements MainView{
         toolbar = getSupportActionBar();
         fragmentManager = getSupportFragmentManager();
         if(savedInstanceState == null){
-            Utils.openFragment(fragmentManager, DashboardFragment.newInstance(), DashboardFragment.TAG, R.id.content_main);
+            dashboardFragment = DashboardFragment.newInstance();
+            Utils.openFragment(fragmentManager, dashboardFragment, DashboardFragment.TAG, R.id.content_main);
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        DashboardFragment f = (DashboardFragment)getSupportFragmentManager().findFragmentByTag(DashboardFragment.TAG);
+        if (f != null && f.isVisible()) {
+            moveTaskToBack(true);
+        }
+
+        Utils.logD("onBackPressed(");
+        super.onBackPressed();
     }
 
     @Override

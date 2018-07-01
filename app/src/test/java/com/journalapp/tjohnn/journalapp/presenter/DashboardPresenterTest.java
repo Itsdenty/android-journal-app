@@ -1,14 +1,9 @@
 package com.journalapp.tjohnn.journalapp.presenter;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.tasks.Task;
 import com.journalapp.tjohnn.journalapp.contracts.DashboardContract;
-import com.journalapp.tjohnn.journalapp.contracts.LoginContract;
 import com.journalapp.tjohnn.journalapp.model.PreferencesHelper;
 import com.journalapp.tjohnn.journalapp.model.database.JournalEntry;
 import com.journalapp.tjohnn.journalapp.model.repository.JournalRepository;
-import com.journalapp.tjohnn.journalapp.utils.AppDi;
-import com.journalapp.tjohnn.journalapp.utils.AppExecutors;
 import com.journalapp.tjohnn.journalapp.utils.Constants;
 
 import org.junit.Before;
@@ -22,11 +17,9 @@ import java.util.Date;
 import java.util.List;
 
 import io.reactivex.Flowable;
-import io.reactivex.Single;
 import io.reactivex.android.plugins.RxAndroidPlugins;
 import io.reactivex.schedulers.Schedulers;
 
-import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.verify;

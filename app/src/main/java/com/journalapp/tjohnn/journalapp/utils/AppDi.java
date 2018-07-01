@@ -37,7 +37,4 @@ public class AppDi {
         return journalRepo;
     }
 
-    public static AppExecutors executors(){
-        return AppExecutors.getInstance();
-    }
 }
