@@ -11,9 +11,9 @@ git clone https://github.com/tjohnn/android-journal-app
 ```
 
 ## Tests
-Unit test for testing the presenter are written with mockito junit framework and
+Unit Tests for testing the presenter are written with mockito junit framework and
 are located in the test/java/com/journalapp/tjohnn/journalapp/presenter package, select and run any
-of the class to test the logic written in a particular presenter class
+of the classes to test the logic written in a particular presenter class
 
 ## Built With
 - Java
