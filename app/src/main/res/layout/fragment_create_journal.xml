@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/et_title"
+        style="@style/AppTheme.EditText"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_journal_title"
+        />
+    <EditText
+        android:id="@+id/et_description"
+        style="@style/AppTheme.EditTextArea"
+        android:hint="@string/enter_journal_description"
+        />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+
+        android:background="@drawable/button_background"/>
+</LinearLayout>

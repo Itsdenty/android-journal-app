@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">JournalApp</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="or">or</string>
+    <string name="sign_in_google">Signin With Google</string>
+    <string name="sign_up_google">Signup With Google</string>
+    <string name="account_sign_in">Already have an account? Login.</string>
+    <string name="full_name">Full Name</string>
+    <string name="enter_journal_title">Enter Journal Title</string>
+    <string name="enter_journal_description">Enter Journal Description</string>
+    <string name="create_journal">Create Journal</string>
+    <string name="create_new_journal">Create New Journal</string>
+    <string name="journal_title_required">Journal title is required</string>
+    <string name="journal_description_required">Journal description is required</string>
+    <string name="login_button_message">Not available, please use google login below.</string>
+    <string name="create_journal_success">Journal created successfully.</string>
+    <string name="delete_journal">Delete Journal</string>
+    <string name="edit_journal">Edit Journal</string>
+    <string name="update_journal_success">Journal updated successfully</string>
+    <string name="journal_deleted">Journal deleted</string>
+    <string name="journal_detail">Journal Detail</string>
+    <string name="filter_by_date">Filter By Date</string>
+    <string name="diary">Diary</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:text="23 Jun, 2018 08:34"
+        android:gravity="end"
+        android:textColor="@color/colorPrimaryDark"/>
+    <TextView
+        android:id="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:minHeight="70dp"
+        android:background="@drawable/drawble_underline"
+        android:textSize="20sp"
+        android:textColor="@color/primaryText"
+        tools:text="This is a testing title is is a testing title and is a"
+        />
+    <TextView
+        android:id="@id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="18sp"
+        tools:text="This is a testing title and is a testing title and is a testing title and is a testing title and is a testing titleThis is a testing title and is a testing title and is a testing title and is a testing title and is a testing title"
+        />
+</LinearLayout>
