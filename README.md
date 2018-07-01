@@ -3,4 +3,4 @@
 #### Login with google account
 #### Saves dairy entries in SQLite database locally
 #### Allows filtering of Journals by day
-#### Editing and deleting of existing database
+#### Editing and deleting of existing journals
